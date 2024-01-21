@@ -5,7 +5,7 @@ import cv2
 frontface = cv2.CascadeClassifier("frontalface_default.xml")
 
 # import the image usin cv2.imread
-image = cv2.imread("CE.jpg")
+image = cv2.imread("avengers.jpg")
 
 # change it to grayscale using cvtColor
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -17,8 +17,8 @@ print(face_cordinates)
 # print the rectangle on the face
 # first argument is the image, second argument is two tuples of the face's coordinates, 3rd argument is the tuple of color combination, 4th argument is the tickness of the line
 # but first, store the lists into a tuple that can be passed to the rectangle method
-(x, y, w, h) = face_cordinates[0]
-cv2.rectangle(image, (x, y), (x+w, y+h), (0, 0, 255), 2)
+for (x, y, w, h) in face_cordinates:
+    cv2.rectangle(image, (x, y), (x+w, y+h), (0, 0, 255), 2)
 
 
 # to show the picture
