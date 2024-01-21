@@ -11,7 +11,7 @@ image = cv2.imread("CE.jpg")
 cv2.imshow("This is our Photo", image)
 
 # this is used to make the program wait for execution
-cv2.waitkey()
+cv2.waitKey()
 
 
 
