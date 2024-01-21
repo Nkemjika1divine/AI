@@ -16,7 +16,7 @@ print(face_cordinates)
 
 # print the rectangle on the face
 # first argument is the image, second argument is two tuples of the face's coordinates, 3rd argument is the tuple of color combination, 4th argument is the tickness of the line
-cv2.rectangle(image, (80, 181), (415, 415), (0, 0, 255), 2)
+cv2.rectangle(image, (80, 181), (415 + 80, 415 + 181), (0, 0, 255), 2)
 
 
 # to show the picture
