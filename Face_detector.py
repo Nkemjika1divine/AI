@@ -26,6 +26,9 @@ for (x, y, w, h) in face_cordinates:
 
 # to show the picture
 cv2.imshow("This is our Photo", image)
+
+# this is used to make the program wait for execution. it keeps the image open for viewing
+cv2.waitKey()
 """
 
 # or rather import a video
@@ -49,9 +52,8 @@ while True:
     
     cv2.waitKey(1)
 
-# this is used to make the program wait for execution. it keeps the image open for viewing
-# cv2.waitKey()
-
+# if you are running from your webcam or a lifestream, make use of the .release() method by saying...
+# variable_of_your_video.release()
 
 
 print("Code completed")
