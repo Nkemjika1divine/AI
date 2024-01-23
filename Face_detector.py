@@ -30,7 +30,7 @@ cv2.imshow("This is our Photo", image)
 
 # or rather import a video
 # however, if you want to make use of your webcam, you say cv2.VideoCapture(0)
-vid = cv2.VideoCapture("cillian.mp4")
+vid = cv2.VideoCapture("haaland.mp4")
 
 # make a while loop that runs throughout the duration of the video
 while True:
@@ -42,7 +42,10 @@ while True:
 
     face_cordinates = frontface.detectMultiScale(gray_video)
 
-    cv2.imshow("This is our Photo", )
+    for (x, y, w, h) in face_cordinates:
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, randrange(255), 0), 2)
+
+    cv2.imshow("This is our Photo", frame)
     
     cv2.waitKey(1)
 
