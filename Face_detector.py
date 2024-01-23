@@ -42,7 +42,7 @@ while True:
 
     face_cordinates = frontface.detectMultiScale(gray_video)
 
-    cv2.imshow("This is our Photo", gray_video)
+    cv2.imshow("This is our Photo", )
     
     cv2.waitKey(1)
 
