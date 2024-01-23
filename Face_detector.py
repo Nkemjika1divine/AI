@@ -35,10 +35,19 @@ cv2.waitKey()
 # however, if you want to make use of your webcam, you say cv2.VideoCapture(0)
 vid = cv2.VideoCapture("haaland.mp4")
 
+# check if the video opened
+if not vid.isOpened():
+    print("Error: Could not open the video file.")
+    exit(1)
+
 # make a while loop that runs throughout the duration of the video
 while True:
     # read the content of the video
     success, frame = vid.read()
+
+    # check if a frame is returned
+    if not success:
+        break
 
     # change it to grayscale using cvtColor
     gray_video = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
