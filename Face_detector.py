@@ -55,5 +55,12 @@ while True:
 # if you are running from your webcam or a lifestream, make use of the .release() method by saying...
 # variable_of_your_video.release()
 
+# also you can use your keyboard to decide when to quit by assigning an ascii value to the waitKey function
+# the waitKey function returns the ascii value of whatever key you press on your keyboard to end a stream
+# key = cv2.waitKey()
+# if key == 81 or key == 113
+#       break
+
+
 
 print("Code completed")
