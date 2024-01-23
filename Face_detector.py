@@ -52,6 +52,11 @@ while True:
     
     cv2.waitKey(1)
 
+vid.release()
+
+# close all open cv2 windows
+cv2.destroyAllWindows()
+
 # if you are running from your webcam or a lifestream, make use of the .release() method by saying...
 # variable_of_your_video.release()
 
