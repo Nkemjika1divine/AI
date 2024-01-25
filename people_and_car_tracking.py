@@ -1,12 +1,16 @@
 import cv2
 
+
 human_body = cv2.CascadeClassifier("fullbody.xml")
+car_body = cv2.CascadeClassifier("cars.xml")
 
 image = cv2.imread("girl.jpg")
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 body = human_body.detectMultiScale(gray_image)
+car = car_body.detectMultiScale(gray_image)
+
 
 print(body)
 
