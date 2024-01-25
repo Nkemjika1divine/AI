@@ -2,7 +2,7 @@ import cv2
 
 human_body = cv2.CascadeClassifier("fullbody.xml")
 
-image = cv2.imread("avengers.jpg")
+image = cv2.imread("girl.jpg")
 
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
