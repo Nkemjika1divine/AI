@@ -29,7 +29,7 @@ if body or car:
     cv2.imshow("The Image", gray_image)
     cv2.waitKey()
 else:
-    print("Found no coordinates")
+    print("Found no coordinates in body or car")
 
 
 
